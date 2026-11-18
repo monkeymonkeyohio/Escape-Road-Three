@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>try{Object.defineProperty(document,"referrer",{value:location.href,configurable:true});}catch(e){}</script>
+<script>
+/* __offlineNetGuard — auto-patched: chan request toi ad/analytics ke ca khi chung nam trong wasm */
+(function () {
+  var HOSTS = ["google-analytics.com","www.google-analytics.com","googletagmanager.com","www.googletagmanager.com","doubleclick.net","cm.g.doubleclick.net","securepubads.g.doubleclick.net","pagead2.googlesyndication.com","imasdk.googleapis.com","s0.2mdn.net","adtrafficquality.google","ep2.adtrafficquality.google","firestore.googleapis.com","config.uca.cloud.unity3d.com","cdp.cloud.unity3d.com","connect.facebook.net","analytics.facebook.com","c.amazon-adsystem.com","config.aps.amazon-adsystem.com","amplitude.com","api.amplitude.com","mixpanel.com","api.mixpanel.com","hotjar.com","script.hotjar.com","clarity.ms","c.clarity.ms","f.clarity.ms","sentry.io","browser.sentry-cdn.com","analytics.tiktok.com","static.cloudflareinsights.com","adinplay.com","api.adinplay.com","mc.yandex.ru","mc.yandex.com","an.yandex.ru","a.poki-cdn.com","devs-api.poki.com","geo.poki.io","api.poki.com","fafvertizing.crazygames.com","mafvertizing.crazygames.com","criteo.com","static.criteo.net","gum.criteo.com","rubiconproject.com","fastlane.rubiconproject.com","3lift.com","tlx.3lift.com","openx.net","openxcdn.net","oa.openxcdn.net","adnxs.com","ib.adnxs.com","pubmatic.com","hb.pubmatic.com","taboola.com","trc.taboola.com","outbrain.com","media.net","contextual.media.net","hadron.ad.gt","id.hadron.ad.gt","ats-wrapper.privacymanager.io","invstatic101.creativecdn.com","qsearch-a.akamaihd.net","cdn.ampproject.org","creativecdn.com","m.igroutka.ru","gameanalytics.com","api.gameanalytics.com","unityads.unity3d.com","auction.unityads.unity3d.com","cdn.unityads.unity3d.com","publisher-config.unityads.unity3d.com","stats.unity3d.com","perf-events.cloud.unity3d.com","adservice.google.com","pagead2.googleadservices.com","leveldata.poki.io","t.poki.io","itch.io","static.itch.io","playfabapi.com","logs-01.loggly.com"];
+  function blocked(u) {
+    if (u === "" || u == null) return true; // URL rỗng (đã gỡ địa chỉ analytics) → không gửi gì
+    try {
+      var h = new URL(String(u), location.href).hostname.toLowerCase();
+      for (var i = 0; i < HOSTS.length; i++) {
+        var b = HOSTS[i];
+        if (h === b || h.endsWith("." + b)) return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+  var _fetch = window.fetch;
+  if (_fetch) window.fetch = function (input, init) {
+    var u = (input && input.url) || input;
+    if (blocked(u)) return Promise.resolve(new Response(null, { status: 204, statusText: "blocked-offline" }));
+    return _fetch.apply(this, arguments);
+  };
+  var _open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (m, u) { this.__blk = blocked(u); return _open.apply(this, arguments); };
+  var _send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function () {
+    if (this.__blk) {
+      var self = this;
+      setTimeout(function () {
+        try {
+          Object.defineProperty(self, "readyState", { value: 4, configurable: true });
+          Object.defineProperty(self, "status", { value: 204, configurable: true });
+          Object.defineProperty(self, "responseText", { value: "", configurable: true });
+          self.onreadystatechange && self.onreadystatechange();
+          self.onload && self.onload();
+        } catch (e) {}
+      }, 0);
+      return;
+    }
+    return _send.apply(this, arguments);
+  };
+  if (navigator.sendBeacon) {
+    var _b = navigator.sendBeacon.bind(navigator);
+    navigator.sendBeacon = function (u) { return blocked(u) ? true : _b.apply(null, arguments); };
+  }
+  var _WS = window.WebSocket;
+  if (_WS) window.WebSocket = function (u, pr) {
+    if (blocked(u)) { try { return new _WS("ws://localhost:1"); } catch (e) {} }
+    return pr === undefined ? new _WS(u) : new _WS(u, pr);
+  };
+})();
+</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="26051406/theme/game.css">
+	<meta name="robots" content="noindex, nofollow">
+	
+	<style>@font-face{font-family:'Fredoka';font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/Fredoka.woff2) format('woff2')}</style>
+	<title>Escape Road 3</title>
+	<meta name="description" content=""/>
+	<style type="text/css">
+		.jss1:before {
+			top: 0;
+			width: 100%;
+			filter: blur(16px);
+			height: 100%;
+			content: "";
+			display: block;
+			opacity: .5;
+			z-index: 0;
+			position: absolute;
+			background-size: cover;
+			background-image: url("26051406/loading.png")
+		}
+	</style> 
+	 
+	<script>
+		var buildUrl = "Build";
+		var versionFolder = "26051406/";
+		var loaderUrl = buildUrl + "/escape-road-3-v26051406.loader.js";
+		var config = {
+			dataUrl: buildUrl + "/escape-road-3-v26051406.data.unityweb",
+			frameworkUrl: buildUrl + "/escape-road-3-v26051406.framework.js.unityweb",
+			codeUrl: buildUrl + "/escape-road-3-v26051406.wasm.unityweb",
+			streamingAssetsUrl: versionFolder+"StreamingAssets",
+			companyName: "azgames.io",
+			productName: "Escape Road 3",
+			productVersion: "26051406"
+		};
+		config.gameId = "escape-road-3";
+		window["GMSOFT_SDKTYPE"] = "gm";
+		localStorage.setItem("gmsdksigndomain", "eyJzaWduZWQiOiJJaHQ2XC9qdTRUWk15dTljNUhNbWNmekM2QWFmdXFIbGlqOFNcL1ZNNGJxOFVERXZ2czBwc3gwZUZQNEdWSkVWNmVFU2FMaGV1UERNMnEwOVVhUFRLODFJbVpVYnBpTndMXC9wNENcL2R2RWRkanlQK1RyUFFqazNLOUxOM0ZNRDluN0hSXC9ZblAxRmJYTkxoOG0zY3ZLT1JjaWdyXC9Na1JJQnV4SndQaWlvTlFMTVVPbkIzUmZUUkV1czBXbThJK3l4WEdzWUttSVhrT1lGT2hMXC8xb29NNG1hYWswMHZCaFwvZ2J1T09DRDBmZE82K2k3WVFuQUpvQUlBVTNtVXZUc0g4bWN3XC9qUmtTc3E5a2hWdktWVStnem4rZndveVpKWDFWTE00alwvUzZWdVF5SGJoSWEzM0d6U2hjUDZYQXpUUTBIOWpsc2pzNU83aEx4alVkUlcrSDFsZW9RPT0iLCJhcCI6InllcyIsImhuIjoiZ2FtZWEuYXpnYW1lLmlvIiwiZG9tYWluIjoiYXpnYW1lLmlvIiwicyI6InllcyIsInN0eXBlIjoyfQ==");
+	</script>
+	<script id="gmsoft-jssdk">
+		/* GMSOFT SDK mock (giữ id: framework v5 gắn listener "load" vào thẻ này — inline nên không bao giờ bắn): thay gmsdkv1.js / gmsoftsdk_v5.js (api.azgame(s).io + lớp "Play game"). Trường v5 lấy theo
+		   response thật của api.azgames.io/ajax/infov3, đã tắt ads/promotion/more games và bỏ URL azgames. */
+		window.GMSOFT_OPTIONS = Object.assign(config, {
+			enableAds: false, adsDebug: false, debug: false, enableDebug: "no", sdkType: "h5", pub_id: "", sdkversion: 5,
+			allow_play: "yes", allow_host: "yes", allow_embed: "yes", domainHost: "gamea.azgame.io", hostindex: 1,
+			enableMoreGame: "no", enablePromotion: false, promotion: { enable: "no", promotion_list: [] },
+			unlockTimer: 60, timeShowInter: 60, timeShowReward: 60,
+			game: { name: config.productName || "", description: "", image: "", redirect_url: "", promotion: "", logo_url: "", moregames_url: "" }
+		});
+		window.GMSOFT_SIGNED = localStorage.getItem("gmsdksigndomain");
+		window.GMSOFT_GAME_INFO = { sdktype: "gm", more_games_url: "", promotion: { enable: "no", call_to_action: "no", promotion_list: [] } };
+		window.GMSOFT_ADS_INFO = { enable: "no", ads_debug: "no", sdk_type: "gm", time_show_inter: 60, time_show_reward: 60, enable_reward: "yes", enable_interstitial: "no", enable_preroll: "no" };
+		document.dispatchEvent(new CustomEvent("gmsoftSdkReady"));
+	</script>
+<script>
+      /* unity-net-guard: request ra origin khác = mất mạng */
+      (function () {
+        function ext(u) {
+          try { var x = new URL(String(u), location.href); return /^https?:$/.test(x.protocol) && x.origin !== location.origin; } catch (e) { return false; }
+        }
+        var open = XMLHttpRequest.prototype.open, send = XMLHttpRequest.prototype.send;
+        XMLHttpRequest.prototype.open = function (m, u, a) { this._blocked = ext(u); this._sync = a === false; return open.apply(this, arguments); };
+        XMLHttpRequest.prototype.send = function () {
+          if (!this._blocked) return send.apply(this, arguments);
+          if (this._sync) throw new DOMException("Failed to load", "NetworkError");
+          var x = this;
+          setTimeout(function () { x.dispatchEvent(new ProgressEvent("error")); x.dispatchEvent(new ProgressEvent("loadend")); }, 0);
+        };
+        var f = window.fetch;
+        window.fetch = function (r) {
+          if (ext(r && r.url || r)) return Promise.reject(new TypeError("Failed to fetch"));
+          return f.apply(this, arguments);
+        };
+        if (navigator.sendBeacon) navigator.sendBeacon = function (u) { return ext(u) ? false : true; };
+        var d = Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, "src");
+        Object.defineProperty(HTMLScriptElement.prototype, "src", {
+          get: d.get, configurable: true,
+          set: function (v) {
+            if (!ext(v)) return d.set.call(this, v);
+            var s = this;
+            setTimeout(function () { s.dispatchEvent(new Event("error")); }, 0);
+          },
+        });
+        var wo = window.open;
+        window.open = function (u) { return ext(u) ? null : wo.apply(this, arguments); };
+      })();
+    </script>
+<script>
+      /* gmsoft-gamesdk-hang: request kiểm tra sdkdom/gamesdk không bao giờ trả về → C# không đếm lỗi RetryRequetLock (lỗi 12 lần = khoá game) */
+      (function () {
+        function hit(u) { return /\/sdkdom\/gamesdk/.test(String(u && u.url || u)); }
+        var f = window.fetch;
+        window.fetch = function (r) { return hit(r) ? new Promise(function () {}) : f.apply(this, arguments); };
+        var open = XMLHttpRequest.prototype.open, send = XMLHttpRequest.prototype.send;
+        XMLHttpRequest.prototype.open = function (m, u) { this._gmHang = hit(u); return open.apply(this, arguments); };
+        XMLHttpRequest.prototype.send = function () { if (!this._gmHang) return send.apply(this, arguments); };
+      })();
+    </script>
+<script>
+      /* gmsoft-afg-mock: afg (AdSense for Games) giả cho kênh H5 của GMSOFT — quà xem quảng cáo nhận ngay */
+      window.afg = window.afg || {
+        ready: true,
+        onBeforeAd: function () {},
+        adBreak: function (o) {
+          o = o || {};
+          if (o.type === "reward") {
+            var show = function () {
+              try { o.beforeAd && o.beforeAd(); } catch (e) {}
+              try { o.adViewed && o.adViewed(); } catch (e) {}
+              try { o.adBreakDone && o.adBreakDone({ breakStatus: "viewed" }); } catch (e) {}
+            };
+            if (o.beforeReward) o.beforeReward(show); else show();
+          } else {
+            try { o.adBreakDone && o.adBreakDone({ breakStatus: "notReady" }); } catch (e) {}
+          }
+        }
+      };
+    </script>
+</head>
+
+<body>
+<div id="unity-container" style="display: none;">
+	<canvas id="unity-canvas"></canvas> 
+</div>
+<div id="loadingBlock" style="">
+	<div class="jss31 jss34 jss1">
+	<div style="position: absolute; font-family: Arial, Helvetica, sans-serif;	bottom: 10px; right: 10px; font-size: 18px; color: #ffffff; opacity: 0.5;">26051406</div>
+		<div class="spinner"></div>
+		<div class="jss31 jss34 jss48" style="flex: 1 1 0%;">
+			<div class="jss32">
+				<div class="jss7 jss9 jss20 jss3">
+					<div class="jss125">
+						<div class="jss123">
+						 <img src="26051406/logo.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--PRODUCT_VERSION:26051406END-->
+		<div class="jss31 jss34" style="flex: 3 1 0%;">
+			<div class="jss32">
+				<div class="jss31 jss34 jss39 jss50 gameloader">
+					<div class="jss32">
+						<div class="gameloader-game-name">Escape Road 3</div>
+					</div>
+					<div class="jss32">
+						<div class="jss32 gameloader-logo">
+							<img id="game-logo" src="26051406/loading.png">
+						</div>
+					</div>
+					<div class="jss32">
+						<div>
+							<div class="gameloader-progressbar">
+								<div class="gameloader-progressbar-progress" id="progress_fill"
+										 style="width: 0%;"></div>
+							</div>
+							<div class="gameloader-progress-info">Game Loading...</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<script> 
+		var loadStartTime = performance.now();
+		var progressElement = document.getElementById('progress_fill');
+		var container =	document.getElementById("unity-container");
+		var canvas =	document.getElementById("unity-canvas");
+		var loadingBar = document.querySelector("#loadingBlock");
+		var progressBarFull = document.querySelector("#progress_fill");
+		var progress_text = document.querySelector(".gameloader-progress-info");
+		let text_percent = "";
+		var script = document.createElement("script");
+		script.src = loaderUrl;
+		script.onload = () => {
+		createUnityInstance(canvas, config, (progress) => {
+			progressElement.style.width = 100 * progress + "%";
+			text_percent = "Downloading file: " + Math.round(progress*100) + "%";
+			progress_text.innerText = text_percent;
+			if (progress >= 99) {
+				progress_text.innerText = "Game Loading ...";
+			}
+		}).then((unityInstance) => {
+			window.unityInstance = unityInstance;
+			setTimeout(function() {
+				loadingBar.style.display = "none";
+				window.focus();
+			}, 2000);
+			container.style.display = "block";
+		}).catch((message) => {
+			alert(message);
+		});
+		};
+		document.body.appendChild(script);
+	</script>
+	<script>
+		function firebaseSetUserProperties(props) {}
+		function firebaseLogEvent(event_name) {}
+		function firebaseLogEventParameter(event_name, event_param) {}
+
+		function gmEvent(eventName, msg){}
+		function gmStartGame(callbackFunction){
+			callbackFunction();
+		}
+			
+		function gmStartAds(callbackFunction){
+			callbackFunction();
+		}
+	</script>
+	
+
+</body>	
+</html>
+
